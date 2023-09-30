@@ -1,6 +1,6 @@
 public class MovableRectangle implements Movable{
-    private MovablePoint topleft;
-    private MovablePoint bottomright;
+    private final MovablePoint topleft;
+    private final MovablePoint bottomright;
 
     public MovableRectangle(int x1, int y1, int x2, int y2, int xSpeed, int ySpeed) {
         this.topleft = new MovablePoint(x1, y1, xSpeed, ySpeed);
@@ -29,5 +29,13 @@ public class MovableRectangle implements Movable{
     public void moveRight() {
         topleft.moveRight();
         bottomright.moveRight();
+    }
+
+    @Override
+    public String toString() {
+        return "MovableRectangle{" +
+                "topleft=" + topleft +
+                ", bottomright=" + bottomright +
+                '}';
     }
 }

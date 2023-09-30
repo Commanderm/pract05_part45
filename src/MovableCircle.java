@@ -1,6 +1,6 @@
 public class MovableCircle implements Movable{
-    private int radius;
-    private MovablePoint center;
+    private final int radius;
+    private final MovablePoint center;
 
     public MovableCircle(int x, int y, int radius, int xSpeed, int ySpeed) {
         this.radius = radius;
